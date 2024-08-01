@@ -1,0 +1,5 @@
+CREATE DATABASE jpa02;
+USE jpa02;
+
+CREATE TABLE department ( id BIGINT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) ); 
+CREATE TABLE employee ( id BIGINT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), department_id BIGINT, FOREIGN KEY (department_id) REFERENCES department(id) );
